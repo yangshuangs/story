@@ -1,0 +1,45 @@
+<!--pages/albumInfo/albumInfo.wxml-->
+<view>
+  <view class="albummask" hidden="{{mask}}">
+    <view class="mask" wx:for='{{aobj}}' data-sid='{{item.id}}' wx:key="item.id">
+      <view class="closemask" bindtap='hidemask'>
+        <image src='/images/closemask.png'></image>
+      </view>
+      {{item.brief}}</view>
+  </view>
+  <view class="albumbox" wx:for='{{aobj}}' data-sid='{{item.id}}' wx:key="item.id">
+    <view class="albumimg">
+      <image src="{{item.picture}}"></image>
+    </view>
+    <view class="albumInfo">
+      <view class="albumname">{{item.name}}</view>
+      <view class="albumdir" bindtap='showmask'> {{item.brief}}</view>
+    </view>
+  </view>
+      <view class='listbox'>
+      <view class='allplay'>
+        播放列表
+        <view class='icon'>
+          <image src='../../images/player.png'></image>
+        </view>
+      </view>
+      <view class='songlist'>
+        <view class='list' wx:for='{{slist}}' data-sid='{{item.id}}' wx:key="item.id">
+          <view class='songimg'>
+            <image src='{{item.picture}}'></image>
+          </view>
+          <view class='songInfo' data-sid='{{item.id}}' wx:key="item.id" data-aname='{{item.melodyAlbum}}' bindtap='toplay'>
+            <view class='songname'>{{item.name}}</view>
+          </view>
+          <view data-sid='{{item.id}}' data-favorated='{{item.favorated}}' wx-if='{{item.favorated == false}}' class='cbtn' bindtap='tocollect'>
+            <image src='../../images/selectxin.png'>
+            </image>
+          </view>
+          <view data-sid='{{item.id}}' data-favorated='{{item.favorated}}' wx-if='{{item.favorated == true}}' class='cbtn' bindtap='tocollect'>
+            <image src='../../images/selectedxin.png'>
+            </image>
+          </view>
+        </view>
+      </view>
+    </view>  
+    </view>

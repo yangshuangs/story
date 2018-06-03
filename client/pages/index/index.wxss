@@ -1,0 +1,111 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  width: 100%;
+  background: #F0F8FF;
+}
+.swiper {
+ height: 400rpx;
+ width: 100%;
+}
+.swiper image {
+ height: 100%;
+ width: 100%;
+}
+.catalogue{
+  background: white;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #F5F5DC;
+}
+.catalogue image{
+  height: 80rpx;
+  width: 80rpx;
+}
+.catalogue text{
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 10rpx;
+}
+.classify{
+  display: flex;
+  flex-direction: column;
+}
+.sleep{
+  display: flex;
+  flex-direction: column;
+  margin-left: 70rpx;
+}
+.sleep image{
+  height: 80rpx;
+  width: 80rpx;
+  margin-left: 20rpx;
+}
+.yuyan{
+  display: flex;
+  flex-direction: column;
+  margin-left: 70rpx;
+}
+.yuyan image{
+  height: 80rpx;
+  width: 80rpx;
+  margin-left: 20rpx;
+}
+.song{
+  display: flex;
+  flex-direction: column;
+  margin-left: 70rpx;
+}
+.song image{
+  height: 80rpx;
+  width: 80rpx;
+  margin-left: 20rpx;
+}
+.song text{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}
+.fine{
+  font-size: 50rpx;
+  text-align: center;
+  padding-top: 20rpx;
+}
+.listbox{
+  width: 100%;
+  padding-bottom:20rpx;
+}
+.list{
+  width:710rpx;
+  height: 580rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+  margin: 20rpx auto 0rpx;
+  position: relative;
+  box-shadow: 0rpx 0rpx 20rpx 3rpx #e1e1e1;
+}
+.list image{
+  width: 98%;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+}
+.albumname{
+  width: 100%;
+  height: 66rpx;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 28rpx;
+  line-height: 66rpx;
+  text-indent: 20rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}

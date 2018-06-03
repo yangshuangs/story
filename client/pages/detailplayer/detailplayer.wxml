@@ -1,0 +1,39 @@
+<!--pages/player/player.wxml-->
+<view>
+    
+  <view class="albumbox"  wx:for='{{plist}}' data-id='{{item.id}}' wx:key="item.id">
+    <view class="albumimg">
+      <image src="{{item.picture}}"></image>
+    </view>
+    <view class="albumInfo">
+      <view class="albumname">{{item.name}}</view>
+      <view class="albumdir" >
+        <view class='contral'>
+         <view class="timeBar">
+					<view class="playTime" style="transform: translateX({{sliderValue}}%)"></view>
+</view>
+          <view class='st'>{{currentTime}}</view>
+          <view class='tt'>{{totalTime}}</view>
+        </view>
+      </view>
+    <view class="playbb">
+       <!-- <view data-sid='{{sobj.id}}' data-favorated='{{sobj.favorated}}' wx-if='{{sobj.favorated == true}}' class='btn collect' bindtap='tocollect'>
+        <image src='../../images/selectedxin.png'></image>
+      </view> 
+      <view data-sid='{{sobj.id}}' data-favorated='{{sobj.favorated}}' wx-if='{{sobj.favorated == false}}' class='btn collect' bindtap='tocollect'>
+        <image src='../../images/xin1.png'></image>
+      </view> -->
+          <view class="btn play" bindtap='bindPlaySong'>
+            <image src="{{(playStatus || sliderValue>=99)?'../../images/icon-play.png':'../../images/icon-pause.png'}}"></image>
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <view class='bg' wx:for='{{plist}}' data-id='{{item.id}}' wx:key="item.id">
+   <text space="emsp"> 
+   {{item.content}}
+   </text>
+  </view>
+
+</view>

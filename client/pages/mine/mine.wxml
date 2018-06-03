@@ -1,0 +1,52 @@
+<!--pages/mine/mine.wxml-->
+<view class='whole'>
+  <view class="container">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+        </block>
+    </view>  
+  </view>
+
+  <view class="user-maixiangMember userstyle">
+    <text class="userTextStyle">我的收藏</text>
+    <text class="righthead"></text>
+  </view>
+
+  <view class='collect'>
+    <view class='list'>
+      <view class='collect_item'>
+        <image src='/images/cat1.jpg'></image>
+        <view class='albumname'>黑猫警长</view>
+       </view>
+    </view>
+    
+    <view class='list'>
+      <view class='collect_item'>
+       <image src='/images/bamiao.jpg'></image>
+       <view class='albumname'>拔苗助长</view>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class='collect'>
+    <view class='list'>
+      <view class='collect_item'>
+        <image src='/images/cat1.jpg'></image>
+        <view class='albumname'>黑猫警长</view>
+       </view>
+    </view>
+    
+    <view class='list'>
+      <view class='collect_item'>
+       <image src='/images/bamiao.jpg'></image>
+       <view class='albumname'>拔苗助长</view>
+      </view>
+    </view>
+    
+  </view>
+
+</view>

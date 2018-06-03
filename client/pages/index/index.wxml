@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<!--轮播图  -->
+<view>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+    <block wx:for="{{moves}}" wx:for-index="index">  
+      <swiper-item>  
+       <image src="{{item.picture}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block>  
+  </swiper>
+
+  <view class='catalogue'>
+    <view class='classify'>
+      <image src='/images/Category.png'></image>
+      <text>类别</text>
+    </view>
+    <view class='sleep'  wx:for='{{category}}' data-id='{{item.id}}' wx:key="item.id" data-name='{{item.name}}'bindtap='sleep_story'>
+      <image src='{{item.picture}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class='story'>
+    <view class='fine'>精选小故事</view>
+  </view>
+  <view class='listbox'>
+    <view class='list'  wx:for='{{hotlist}}' data-id='{{item.id}}' wx:key="item.id" data-name='{{item.name}}' bindtap='detailplay'>
+      <image src='{{item.picture}}'></image>
+      <view class='albumname'>{{item.name}}</view>
+    </view>
+  </view>
+ 
+</view>
+
